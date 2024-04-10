@@ -5,9 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Feminist magazine archives</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <!-- Stili CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body>
@@ -31,6 +33,10 @@
                             About Rivista 2
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <!-- Pulsante per scaricare le immagini in formato pdf -->
+                        <button id="downloadImagesBtn" class="btn btn-success">Scarica PDF dei ritagli</button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -51,33 +57,33 @@
 
     <!-- Gallery Collage -->
     <div class="container mb-5 mt-5 pt-5" id="tema-1" style="margin-top: 100px;">
-        <h2>Tema 1</h2>
+        <h2 class="text-center">Tema 1</h2>
         <div class="row gallery">
             <div class="col-md-4 mt-3 col-lg-3">
                 <a href="#" class="image-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDetails"
                     data-url="./img/tema 1/Aspirina-1990_page-0003.jpg" data-title="Lorem ipsum dolor sit amet"
-                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2" >
+                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2">
                     <img src="./img/tema 1/Aspirina-1990_page-0003.jpg" class="img-fluid gallery-img" alt="image">
                 </a>
             </div>
             <div class="col-md-4 mt-3 col-lg-3">
                 <a href="#" class="image-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDetails"
                     data-url="./img/tema 1/Aspirina-1990_page-0004.jpg" data-title="Lorem ipsum dolor sit amet"
-                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2" >
+                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2">
                     <img src="./img/tema 1/Aspirina-1990_page-0004.jpg" class="img-fluid gallery-img" alt="image">
                 </a>
             </div>
             <div class="col-md-4 mt-3 col-lg-3">
                 <a href="#" class="image-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDetails"
                     data-url="./img/tema 1/Differenze 1979_n10_page-0009.jpg" data-title="Lorem ipsum dolor sit amet"
-                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2" >
+                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2">
                     <img src="./img/tema 1/Differenze 1979_n10_page-0009.jpg" class="img-fluid gallery-img" alt="image">
                 </a>
             </div>
             <div class="col-md-4 mt-3 col-lg-3">
                 <a href="#" class="image-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDetails"
                     data-url="./img/tema 1/Differenze 1979_n10_page-0020.jpg" data-title="Lorem ipsum dolor sit amet"
-                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2" >
+                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2">
                     <img src="./img/tema 1/Differenze 1979_n10_page-0020.jpg" class="img-fluid gallery-img" alt="image">
                 </a>
             </div>
@@ -86,33 +92,33 @@
     </div>
 
     <div class="container mb-5 mt-5 pt-5" id="tema-2" style="margin-top: 100px;">
-        <h2>Tema 2</h2>
+        <h2 class="text-center">Tema 2</h2>
         <div class="row gallery">
             <div class="col-md-4 mt-3 col-lg-3">
                 <a href="#" class="image-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDetails"
                     data-url="./img/tema 2/Aspirina-1990_page-0005.jpg" data-title="Lorem ipsum dolor sit amet"
-                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2" >
+                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2">
                     <img src="./img/tema 2/Aspirina-1990_page-0005.jpg" class="img-fluid gallery-img" alt="image">
                 </a>
             </div>
             <div class="col-md-4 mt-3 col-lg-3">
                 <a href="#" class="image-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDetails"
                     data-url="./img/tema 2/Aspirina-1990_page-0006.jpg" data-title="Lorem ipsum dolor sit amet"
-                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2" >
+                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2">
                     <img src="./img/tema 2/Aspirina-1990_page-0006.jpg" class="img-fluid gallery-img" alt="image">
                 </a>
             </div>
             <div class="col-md-4 mt-3 col-lg-3">
                 <a href="#" class="image-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDetails"
                     data-url="/img/tema 2/Differenze 1979_n10_page-0008.jpg" data-title="Lorem ipsum dolor sit amet"
-                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2" >
+                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2">
                     <img src="./img/tema 2/Differenze 1979_n10_page-0008.jpg" class="img-fluid gallery-img" alt="image">
                 </a>
             </div>
             <div class="col-md-4 mt-3 col-lg-3">
                 <a href="#" class="image-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDetails"
                     data-url="./img/tema 2/Differenze 1979_n10_page-0031.jpg" data-title="Lorem ipsum dolor sit amet"
-                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2" >
+                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2">
                     <img src="./img/tema 2/Differenze 1979_n10_page-0031.jpg" class="img-fluid gallery-img" alt="image">
                 </a>
             </div>
@@ -121,33 +127,33 @@
     </div>
 
     <div class="container mb-5 mt-5 pt-5" id="tema-3" style="margin-top: 100px;">
-        <h2>Tema 3</h2>
+        <h2 class="text-center">Tema 3</h2>
         <div class="row gallery">
             <div class="col-md-4 mt-3 col-lg-3">
                 <a href="#" class="image-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDetails"
                     data-url="./img/tema 3/13.jpg" data-title="Lorem ipsum dolor sit amet"
-                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2" >
+                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2">
                     <img src="./img/tema 3/13.jpg" class="img-fluid gallery-img" alt="image">
                 </a>
             </div>
             <div class="col-md-4 mt-3 col-lg-3">
                 <a href="#" class="image-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDetails"
                     data-url="./img/tema 3/4.jpg" data-title="Lorem ipsum dolor sit amet" data-text="Una bella immagine"
-                    data-year="2024" data-related="Tema 2" >
+                    data-year="2024" data-related="Tema 2">
                     <img src="./img/tema 3/4.jpg" class="img-fluid gallery-img" alt="image">
                 </a>
             </div>
             <div class="col-md-4 mt-3 col-lg-3">
                 <a href="#" class="image-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDetails"
                     data-url="./img/tema 3/Aspirina-1990_page-0020.jpg" data-title="Lorem ipsum dolor sit amet"
-                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2" >
+                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2">
                     <img src="./img/tema 3/Aspirina-1990_page-0020.jpg" class="img-fluid gallery-img" alt="image">
                 </a>
             </div>
             <div class="col-md-4 mt-3 col-lg-3">
                 <a href="#" class="image-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDetails"
                     data-url="./img/tema 3/Differenze 1979_n10_page-0029.jpg" data-title="Lorem ipsum dolor sit amet"
-                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2" >
+                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2">
                     <img src="./img/tema 3/Differenze 1979_n10_page-0029.jpg" class="img-fluid gallery-img" alt="image">
                 </a>
             </div>
@@ -160,6 +166,7 @@
         aria-labelledby="offcanvasDetailsLabel" style="background-color: rgba(255, 255, 255, 0.7);">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasDetailsLabel"></h5>
+            <button type="button" class="btn btn-dark " id="cropButton">Ritaglia</button>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -178,7 +185,17 @@
         </div>
     </div>
 
-    <!-- Qui estrapoliamo le informazioni dell'immagine in galleria e le inseriamo nell'offcanvas -->
+    <!-- Script per il download automatico di jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+
+    <!-- Script di Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Libreria di Cropper.js per il ritaglio immagine -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const imageLinks = document.querySelectorAll('.image-link');
@@ -187,6 +204,8 @@
             const offcanvasText = document.getElementById('offcanvas-text');
             const relatedTheme = document.getElementById('related-theme');
             const offcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasDetails'));
+            let cropper;
+            let croppedImages = []; // Array per salvare i ritagli
 
             imageLinks.forEach(link => {
                 link.addEventListener('click', function (event) {
@@ -200,49 +219,51 @@
                     offcanvasTitle.textContent = imageTitle;
                     offcanvasImage.src = imageUrl;
                     offcanvasText.textContent = imageText;
-
                     relatedTheme.textContent = relatedThemeName;
+
+                    // Inizializzare Cropper.js sull'immagine
+                    if (cropper) {
+                        cropper.replace(imageUrl);
+                    } else {
+                        cropper = new Cropper(offcanvasImage, {
+                            aspectRatio: NaN, // Possibilità di ritagliare in qualsiasi proporzione
+                            viewMode: 1, // Visualizzazione ritaglio in base alla dimensione dell'immagine
+                        });
+                    }
                 });
             });
-        });
-    </script>
 
-    <!-- Questo script genera una forma casuale ad ogni immagine per l'effetto ritaglio di giornale -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const images = document.querySelectorAll('.gallery-img');
+            // Al click sul pulsante ritaglia viene creato e salvato il ritaglio
+            document.getElementById('cropButton').addEventListener('click', function () {
+                // Ottenere i dati del ritaglio
+                const croppedCanvas = cropper.getCroppedCanvas();
+                const croppedImage = croppedCanvas.toDataURL(); // Immagine ritagliata come base64
 
-            images.forEach(image => {
-                const clipPath = generateRandomClipPath();
-                image.style.clipPath = `polygon(${clipPath})`;
+                // Aggiungere l'immagine ritagliata all'array dei ritagli
+                croppedImages.push(croppedImage);
+
+                // Mostrare un alert informativo sull'avvenuto ritaglio e salvataggio
+                alert('Immagine ritagliata e salvata con successo!');
+            });
+
+            // Al click sul pulsante "Scarica immagini" converti i ritagli in PDF e avvia il download
+            document.getElementById('downloadImagesBtn').addEventListener('click', function () {
+                // Creare un nuovo oggetto jsPDF
+                const doc = new jsPDF();
+
+                // Aggiungere ogni ritaglio come pagina al PDF
+                croppedImages.forEach((croppedImage, index) => {
+                    if (index > 0) {
+                        doc.addPage();
+                    }
+                    doc.addImage(croppedImage, 'JPEG', 10, 10, 180, 150); // Aggiungi l'immagine ritagliata come pagina PDF
+                });
+
+                // Scaricare il PDF automaticamente dal browser
+                doc.save('ritagli.pdf');
             });
         });
-
-        function generateRandomClipPath() {
-            const points = [];
-            const numPoints = 10; // Numero di punti per il poligono
-            const maxDeviation = 20; // Massimo spostamento dai bordi
-            const minAngle = 20; // Angolo minimo tra i lati del poligono
-            const maxAngle = 100; // Angolo massimo tra i lati del poligono
-
-            let lastAngle = Math.random() * 360; // Angolo casuale iniziale
-
-            for (let i = 0; i < numPoints; i++) {
-                const angle = lastAngle + minAngle + Math.random() * (maxAngle - minAngle); // Genera un angolo casuale
-                lastAngle = angle % 360; // Aggiorna l'ultimo angolo
-
-                const x = 50 + Math.cos(angle * Math.PI / 180) * (50 + Math.random() * maxDeviation); // Coordinate x casuali
-                const y = 50 + Math.sin(angle * Math.PI / 180) * (50 + Math.random() * maxDeviation); // Coordinate y casuali
-                points.push(`${x}% ${y}%`);
-            }
-
-            return points.join(', ');
-        }
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>

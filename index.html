@@ -34,8 +34,8 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <!-- Pulsante per scaricare le immagini in formato pdf -->
-                        <button id="downloadImagesBtn" class="btn btn-success">Scarica PDF dei ritagli</button>
+                        <!-- Pulsante per mostrare i ritagli fatti -->
+                        <button id="showCroppedImagesBtn" class="btn btn-success">Mostra ritagli</button>
                     </li>
                 </ul>
             </div>
@@ -185,8 +185,16 @@
         </div>
     </div>
 
-    <!-- Script per il download automatico di jsPDF -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+    <div class="offcanvas offcanvas-end w-75" tabindex="-1" id="croppedImagesOffcanvas"
+        aria-labelledby="croppedImagesOffcanvasLabel" style="background-color: rgba(255, 255, 255, 0.7);">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="croppedImagesOffcanvasLabel">Ritagli</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="croppedImagesContainer" class="d-flex flex-wrap justify-content-center"></div>
+        </div>
+    </div>
 
     <!-- Script di Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -246,21 +254,22 @@
                 alert('Immagine ritagliata e salvata con successo!');
             });
 
-            // Al click sul pulsante "Scarica immagini" converti i ritagli in PDF e avvia il download
-            document.getElementById('downloadImagesBtn').addEventListener('click', function () {
-                // Creare un nuovo oggetto jsPDF
-                const doc = new jsPDF();
+            // Al click sul pulsante "Mostra ritagli" apri un nuovo offcanvas per visualizzare i ritagli
+            document.getElementById('showCroppedImagesBtn').addEventListener('click', function () {
+                const croppedImagesContainer = document.getElementById('croppedImagesContainer');
+                croppedImagesContainer.innerHTML = ''; // Pulisci il contenitore
 
-                // Aggiungere ogni ritaglio come pagina al PDF
-                croppedImages.forEach((croppedImage, index) => {
-                    if (index > 0) {
-                        doc.addPage();
-                    }
-                    doc.addImage(croppedImage, 'JPEG', 10, 10, 180, 150); // Aggiungi l'immagine ritagliata come pagina PDF
+                // Aggiungi ogni ritaglio come immagine miniature al contenitore
+                croppedImages.forEach(croppedImage => {
+                    const img = document.createElement('img');
+                    img.src = croppedImage;
+                    img.classList.add('img-thumbnail', 'm-2');
+                    croppedImagesContainer.appendChild(img);
                 });
 
-                // Scaricare il PDF automaticamente dal browser
-                doc.save('ritagli.pdf');
+                // Apri il nuovo offcanvas
+                const croppedImagesOffcanvas = new bootstrap.Offcanvas(document.getElementById('croppedImagesOffcanvas'));
+                croppedImagesOffcanvas.show();
             });
         });
     </script>

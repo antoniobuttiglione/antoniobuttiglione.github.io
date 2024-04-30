@@ -16,7 +16,9 @@
     <!-- Navabar principale -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">
+                <img style="width:35px;" src="./img/logo.png" alt="Logo">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -57,19 +59,27 @@
 
     <!-- Gallery Collage -->
     <div class="container mb-5 mt-5 pt-5" id="tema-1" style="margin-top: 100px;">
-        <h2 class="text-center">Tema 1</h2>
+        <h2 class="text-center title-font">Tema 1</h2>
         <div class="row gallery">
             <div class="col-md-4 mt-3 col-lg-3">
                 <a href="#" class="image-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDetails"
-                    data-url="./img/tema 1/Aspirina-1990_page-0003.jpg" data-title="Lorem ipsum dolor sit amet"
-                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2">
+                    data-url="./img/tema 1/Aspirina-1990_page-0003.jpg" data-title="Aspirina"
+                    data-text="Publisher:
+                    Cooperativa Libera stampa
+
+                    Authors:
+                    Pat Carra, Fiorella Cagnoni, Bibi Tomasi, Sylvie Coyaud, Giuliana Maldini, Lori Chiti, Fernanda Core, Alessia Fani, Pier Besucov, Stefania Guidastri" data-year="December 1988" data-related="Tema 2">
                     <img src="./img/tema 1/Aspirina-1990_page-0003.jpg" class="img-fluid gallery-img" alt="image">
                 </a>
             </div>
             <div class="col-md-4 mt-3 col-lg-3">
                 <a href="#" class="image-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDetails"
-                    data-url="./img/tema 1/Aspirina-1990_page-0004.jpg" data-title="Lorem ipsum dolor sit amet"
-                    data-text="Una bella immagine" data-year="2024" data-related="Tema 2">
+                    data-url="./img/tema 1/Aspirina-1990_page-0004.jpg" data-title="Differenze"
+                    data-text="Publisher:
+                    Stampa Centro Grafico GPR 
+                    
+                    Authors:
+                    Bianca Pomeranzi, Cloti Ricciardi, Edda Billi, Elena Gentili, Hela Mascia, Simone Carbonel, Simonetta Spinelli" data-year="November 1979" data-related="Tema 2">
                     <img src="./img/tema 1/Aspirina-1990_page-0004.jpg" class="img-fluid gallery-img" alt="image">
                 </a>
             </div>
@@ -92,7 +102,7 @@
     </div>
 
     <div class="container mb-5 mt-5 pt-5" id="tema-2" style="margin-top: 100px;">
-        <h2 class="text-center">Tema 2</h2>
+        <h2 class="text-center title-font">Tema 2</h2>
         <div class="row gallery">
             <div class="col-md-4 mt-3 col-lg-3">
                 <a href="#" class="image-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDetails"
@@ -127,7 +137,7 @@
     </div>
 
     <div class="container mb-5 mt-5 pt-5" id="tema-3" style="margin-top: 100px;">
-        <h2 class="text-center">Tema 3</h2>
+        <h2 class="text-center title-font">Tema 3</h2>
         <div class="row gallery">
             <div class="col-md-4 mt-3 col-lg-3">
                 <a href="#" class="image-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDetails"
@@ -165,7 +175,7 @@
     <div class="offcanvas offcanvas-end w-75" tabindex="-1" id="offcanvasDetails"
         aria-labelledby="offcanvasDetailsLabel" style="background-color: rgba(255, 255, 255, 0.7);">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasDetailsLabel"></h5>
+            <h5 class="offcanvas-title title-font" id="offcanvasDetailsLabel"></h5>
             <button type="button" class="btn btn-dark " id="cropButton">Ritaglia</button>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
@@ -175,10 +185,11 @@
                     <img id="offcanvas-image" src="https://source.unsplash.com/collection/190727/1500x900"
                         class="img-fluid" alt="image">
                 </div>
-                <div class="col-4 bg-light">
-                    <h3 id="offcanvas-title"></h3>
+                <div class="col-4 bg-light p-4">
+                    <h3 class="title-font" id="offcanvas-title"></h3>
+                    <p id="date"></p>
                     <p id="offcanvas-text"></p>
-                    <h4>Tema correlato</h4>
+                    <h4 class="title-font">Tema correlato</h4>
                     <span id="related-theme"></span>
                 </div>
             </div>
@@ -188,7 +199,7 @@
     <div class="offcanvas offcanvas-end w-75" tabindex="-1" id="croppedImagesOffcanvas"
         aria-labelledby="croppedImagesOffcanvasLabel" style="background-color: rgba(255, 255, 255, 0.7);">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="croppedImagesOffcanvasLabel">Ritagli</h5>
+            <h5 class="offcanvas-title title-font" id="croppedImagesOffcanvasLabel">Ritagli</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -209,6 +220,7 @@
             const imageLinks = document.querySelectorAll('.image-link');
             const offcanvasTitle = document.getElementById('offcanvas-title');
             const offcanvasImage = document.getElementById('offcanvas-image');
+            const offcanvasDate = document.getElementById('date');
             const offcanvasText = document.getElementById('offcanvas-text');
             const relatedTheme = document.getElementById('related-theme');
             const offcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasDetails'));
@@ -220,13 +232,14 @@
                     event.preventDefault();
                     const imageUrl = this.getAttribute('data-url');
                     const imageTitle = this.getAttribute('data-title');
-                    const imageText = this.getAttribute('data-text');
+                    const imageText = this.getAttribute('data-text').replace(/\n/g, '<br>');
                     const imageYear = this.getAttribute('data-year');
                     const relatedThemeName = this.getAttribute('data-related');
 
                     offcanvasTitle.textContent = imageTitle;
                     offcanvasImage.src = imageUrl;
-                    offcanvasText.textContent = imageText;
+                    offcanvasDate.textContent = imageYear;
+                    offcanvasText.innerHTML = imageText;
                     relatedTheme.textContent = relatedThemeName;
 
                     // Inizializzare Cropper.js sull'immagine

@@ -14,7 +14,7 @@
 
 <body>
     <!-- Navabar principale -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <nav class="navbar navbar-expand-lg bg-body fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img style="width:35px;" src="./img/logo.png" alt="Logo">
@@ -37,7 +37,7 @@
                     </li>
                     <li class="nav-item">
                         <!-- Pulsante per mostrare i ritagli fatti -->
-                        <button id="showCroppedImagesBtn" class="btn btn-success">Mostra ritagli</button>
+                        <button id="showCroppedImagesBtn" class="btn btn-outline-dark">Mostra ritagli</button>
                     </li>
                 </ul>
             </div>
@@ -45,20 +45,20 @@
     </nav>
 
     <!-- Pills Temi navigation -->
-    <ul class="nav nav-pills justify-content-center fixed-top bg-secondary-subtle " style="margin-top: 55px;">
+    <ul class="nav nav-pills justify-content-center fixed-top bg-body" style="margin-top: 55px;">
         <li class="nav-item">
-            <a class="nav-link" href="#tema-1">Tema 1</a>
+            <a class="nav-link text-black text-decoration-underline" href="#tema-1">Tema 1</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#tema-2">Tema 2</a>
+            <a class="nav-link text-black text-decoration-underline" href="#tema-2">Tema 2</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#tema-3">Tema 3</a>
+            <a class="nav-link text-black text-decoration-underline" href="#tema-3">Tema 3</a>
         </li>
     </ul>
 
     <!-- Gallery Collage -->
-    <div class="container mb-5 mt-5 pt-5" id="tema-1" style="margin-top: 100px;">
+    <div class="container mb-5 pt-5" id="tema-1" style="margin-top: 125px;">
         <h2 class="text-center title-font">Tema 1</h2>
         <div class="row gallery">
             <div class="col-md-4 mt-3 col-lg-3">
@@ -176,7 +176,7 @@
         aria-labelledby="offcanvasDetailsLabel" style="background-color: rgba(255, 255, 255, 0.7);">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title title-font" id="offcanvasDetailsLabel"></h5>
-            <button type="button" class="btn btn-dark " id="cropButton">Ritaglia</button>
+            <button type="button" class="btn btn-outline-dark " id="cropButton">Ritaglia</button>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">

@@ -31,16 +31,18 @@ body {
     transform: scale(1.25);
 }
 
-.gallery .col-md-4 {
-    position: relative;
-}
-
-.gallery .col-md-4:first-child .gallery-img {
-    position: absolute;
-    right: -20%;
-}
-
-.gallery .col-md-4:last-child .gallery-img {
-    position: absolute;
-    left: -20%;
+@media only screen and (min-width: 768px) {
+    .gallery .col-md-4 {
+        position: relative;
+    }
+    
+    .gallery .col-md-4:first-child .gallery-img {
+        position: absolute;
+        right: -20%;
+    }
+    
+    .gallery .col-md-4:last-child .gallery-img {
+        position: absolute;
+        left: -20%;
+    }
 }

@@ -1,0 +1,124 @@
+/* reset degli stili di default del browser */
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+
+/* stili per il menu di navigazione */
+.main-navbar, .two-column-section {
+    display: flex;
+}
+
+.logo-container {
+    margin-left: 15px;
+}
+
+.main-navbar {
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: #5E9732;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.main-navbar a {
+    padding: 10px;
+}
+
+.main-navbar a:hover {
+    background-color: #3C7113;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0 15px 0 0;
+    display: none;
+}
+
+
+/* stile per la hero section */
+.hero-section {
+    position: relative;
+    height: 30vh;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.hero-section img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-section h1 {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #5E9732;
+}
+
+/* stile per le section di contenuto */
+.two-column-section, .single-column-section {
+    margin: 20px 10%;
+    padding-top: 55px;
+}
+
+.two-column-section {
+    flex-direction: column;
+}
+
+.two-column-section div {
+    width: 100%;
+}
+
+.two-column-section img {
+    width: 100%;
+    height: auto;
+}
+
+.two-column-section h2, .two-column-section h3 {
+    text-align: center;
+}
+
+/* stile per il contact form */
+.contact-form div {
+    margin: 10px 0;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #3C7113;
+    padding: 5px 5px 5px 15px;
+}
+
+.contact-form input:focus-visible, .contact-form textarea:focus-visible {
+    outline: 3px solid #3C7113;
+    border-radius: 3px;
+}
+
+.contact-form input {
+    height: 40px;
+}
+
+.contact-form textarea {
+    height: 100px;
+}
+
+/* stile per il footer */
+.main-footer {
+    background-color: #5E9732;
+    text-align: center;
+    padding-top: 15px;
+    font-weight: bold;
+    height: 60px;
+}
